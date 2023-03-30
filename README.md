@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Getting Started with This project
+This is starter project for creating DAPP 
+Using frontend Reactjs and truffle framework.
+Truffle is a world-class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## For cloning
+After cloning this project run `npm install` to install all dependencies
+To add new dependency run `npm install --save-dev package-name`. Write name of package Name in place of package-name.
+
+## For smart contract
+The project has ./src/contracts where you can write smart contracts.
+For deploying contracts write your .js code in ./migrations .
+write test for smart contract in ./test .
+
+## For Frontend
+For working in Frontend start modifying ./src/App.js .
+
+## Other
+For making changes in solidity version, adding new network for deployment use /truffle-config.js . 
+
 
 ## Available Scripts
 
