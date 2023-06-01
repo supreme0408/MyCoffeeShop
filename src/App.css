@@ -27,6 +27,21 @@
 .App-link {
   color: #61dafb;
 }
+.nav-addr{
+  color: white;
+  border-radius: 24px;
+  font-size: large;
+  background-color: brown;
+  padding: 6px;
+  width: 168px;
+  margin-left: 750%;
+  margin-bottom: 2px;
+}
+.btn-pos{
+  padding: 6px;
+  width: 148px;
+  margin-left: 800%;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -34,5 +49,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+#txnwait{
+  font-size: x-large;
+  font-weight: 500;
+  color: red;
+  animation: blink 1s linear infinite;
+  position: absolute;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+
+}
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
   }
 }
