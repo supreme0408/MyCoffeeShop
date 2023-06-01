@@ -24,9 +24,13 @@ module.exports = {
     sepolia: {
       provider: () => new HDWalletProvider(mnemonic,infuraEndpoint),
       network_id: 11155111,
-      confirmations: 1,
-      timeoutBlocks: 200,
-      skipDryRun: true
+      timeout: 60000,
+      gas: 8000000, // Specify the gas limit for transactions (adjust according to your requirements)
+      gasPrice: 20000000000, // Specify the gas price (adjust according to current network conditions)
+      confirmations: 1, // Set the number of confirmations required for a transaction to be considered finalized
+      skipDryRun: true, // Skip the dry run when running migrations
+      networkCheckTimeout: 10000, // Set the timeout for network checks during migrations
+      from: "0xF08809d588bd1331c7C9c1D8B3fbCDC7acc57bb6",
     },
   },
 

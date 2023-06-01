@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
     SimpleGrid,
@@ -82,7 +83,7 @@ function Content({ SC,TC, currentAddress, isconnect, allItems,setbal }) {
         if (isconnect && !isbCWCcall) {
             try {
                 setbCWCcall(1);
-                await TC.methods.approve('0x750070F04A108249d092917a9acC84A5FdeE606B',amount).send({from:currentAddress})
+                await TC.methods.approve('0x383f96CE91Cfb3eBa91a72b0a04fdcE2D58C74FF',amount).send({from:currentAddress})
                     .on('transactionHash',async (hash)=>{
                         await SC.methods.bCWCLT(id).send({ from: currentAddress})
                         .on('receipt',function(receipt){

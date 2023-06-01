@@ -1,3 +1,4 @@
+
 import './App.css';
 import {useState,useEffect} from 'react';
 import React from 'react';
@@ -61,8 +62,8 @@ function App() {
 
   const getContract = async()=>{
     if(ethereum){
-      const CoffeeShopAddress = '0x750070F04A108249d092917a9acC84A5FdeE606B';
-      const CoffeeTokenAddress = '0x6e2841E9a83C6Fa5eeed041aDF766FB64fc8800D';
+      const CoffeeShopAddress = '0x383f96CE91Cfb3eBa91a72b0a04fdcE2D58C74FF';
+      const CoffeeTokenAddress = '0x24C5d7325618383BF91B40591701B0F9781d63AE';
       const cs = new web3.eth.Contract(CoffeeShopABI.abi,CoffeeShopAddress);
       const ct = new web3.eth.Contract(CoffeeTokenABI.abi,CoffeeTokenAddress);
     
@@ -83,6 +84,7 @@ function App() {
       console.log(ids);
     }
     fetchData();
+    await getAccountBalance();
     }
   };
 

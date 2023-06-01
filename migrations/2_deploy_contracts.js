@@ -1,0 +1,76 @@
+const CoffeeToken = artifacts.require('CoffeeToken');
+const CoffeeShop = artifacts.require('CoffeeShop');
+
+module.exports = async function(deployer){
+  //Deploy Token
+  await deployer.deploy(CoffeeToken);
+  const token = await CoffeeToken.deployed();
+
+  //Deploy Shop
+  await deployer.deploy(CoffeeShop,token.address);
+  const coffeeshop = await CoffeeShop.deployed();
+  console.log("Token address",token.address);
+  console.log("Shop Address",coffeeshop.address);
+
+  //Transfer all tokens to Shop
+  await token.transfer(coffeeshop.address,'10000000000000000000000');
+
+}
+
+// Starting migrations...
+// ======================
+// > Network name:    'sepolia'
+// > Network id:      11155111
+// > Block gas limit: 30000000 (0x1c9c380)
+
+
+// 2_deploy_contracts.js
+// =====================
+
+//    Deploying 'CoffeeToken'
+//    -----------------------
+//    > transaction hash:    0x978979e2ddf11026d66353921456a343b3e86b2fcf35f9197fd0bcc1a4883ba0
+//    > Blocks: 1            Seconds: 13
+//    > contract address:    0x24C5d7325618383BF91B40591701B0F9781d63AE
+//    > block number:        3602828
+//    > block timestamp:     1685628936
+//    > account:             0xF08809d588bd1331c7C9c1D8B3fbCDC7acc57bb6
+//    > balance:             1.41576429193982663
+//    > gas used:            864756 (0xd31f4)
+//    > gas price:           20 gwei
+//    > value sent:          0 ETH
+//    > total cost:          0.01729512 ETH
+
+//    Pausing for 1 confirmations...
+
+//    -------------------------------
+//    > confirmation number: 1 (block: 3602829)
+
+//    Deploying 'CoffeeShop'
+//    ----------------------
+//    > transaction hash:    0xea3129b2ce9d95b416d9bacff79b6b7a613eb08e98c45116f9451f486798b3a1
+//    > Blocks: 2            Seconds: 18
+//    > contract address:    0x383f96CE91Cfb3eBa91a72b0a04fdcE2D58C74FF
+//    > block number:        3602831
+//    > block timestamp:     1685628972
+//    > account:             0xF08809d588bd1331c7C9c1D8B3fbCDC7acc57bb6
+//    > balance:             1.37647707193982663
+//    > gas used:            1964361 (0x1df949)
+//    > gas price:           20 gwei
+//    > value sent:          0 ETH
+//    > total cost:          0.03928722 ETH
+
+//    Pausing for 1 confirmations...
+
+//    -------------------------------
+//    > confirmation number: 1 (block: 3602832)
+// Token address 0x24C5d7325618383BF91B40591701B0F9781d63AE
+// Shop Address 0x383f96CE91Cfb3eBa91a72b0a04fdcE2D58C74FF
+//    > Saving artifacts
+//    -------------------------------------
+//    > Total cost:          0.05658234 ETH
+
+// Summary
+// =======
+// > Total deployments:   2
+// > Final cost:          0.05658234 ETH
