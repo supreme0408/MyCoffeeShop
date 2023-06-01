@@ -40,12 +40,10 @@ For making changes in solidity version, adding new network for deployment use /t
    > gas used:            864756 (0xd31f4)
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.01729512 ETH
-
-   Pausing for 1 confirmations...
-   ---
+   > total cost:          0.01729512 ETH<br>
+   >Pausing for 1 confirmations...<br>
    > confirmation number: 1 (block: 3602829)
-   ---
+
 #### Deploying 'CoffeeShop'
    ----------------------
    > transaction hash:    0xea3129b2ce9d95b416d9bacff79b6b7a613eb08e98c45116f9451f486798b3a1
@@ -58,15 +56,12 @@ For making changes in solidity version, adding new network for deployment use /t
    > gas used:            1964361 (0x1df949)
    > gas price:           20 gwei
    > value sent:          0 ETH
-   > total cost:          0.03928722 ETH
-
-   Pausing for 1 confirmations...
-   -------------------------------------
+   > total cost:          0.03928722 ETH<br>
+   >Pausing for 1 confirmations...<br>
    > confirmation number: 1 (block: 3602832)
    > Saving artifacts
    -------------------------------------
    > Total cost:          0.05658234 ETH
-
 ### Summary
 ===========
 > Total deployments:   2<br>
