@@ -174,6 +174,7 @@ function App() {
     <ChakraProvider>
     <div className="App">
       <Header/><br/>
+      <div style={{dispaly:"flex",justifyContent:"space-between"}}>
       <Nav pullRight style={{position:'fixed'}}>
           { !isConnect ?
           <Button colorScheme='purple' className='btn-pos' onClick={walletConnect}>Connect Wallet</Button>
@@ -183,6 +184,8 @@ function App() {
             </React.Fragment>
         }
         </Nav>
+        <span style={{fontSize:"x-large",marginLeft:"24px"}}><b>Our Menu</b></span>
+        </div>
       <Content SC={shopContract} TC={tokenContract} currentAddress={currentAddress} isconnect={isConnect} allItems={allItems} setbal={setaccbal}/>
     </div>
     </ChakraProvider>

@@ -125,7 +125,6 @@ function Content({ SC,TC, currentAddress, isconnect, allItems,setbal }) {
     return (
         <div id="menu" >
             {(isbCWCcall||isbCWEcall)?<div id="txnwait">Wait. . .</div>:<div></div> }
-            <h2>Our Menu</h2>
             <SimpleGrid
                 spacing={14}
                 templateColumns="repeat(auto-fill, minmax(300px, 10fr))"
