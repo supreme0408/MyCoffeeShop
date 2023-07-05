@@ -173,18 +173,18 @@ function App() {
     <>
     <ChakraProvider>
     <div className="App">
-      <Header/><br/>
-      <div style={{dispaly:"flex",justifyContent:"space-between"}}>
-      <Nav pullRight style={{position:'fixed'}}>
+      <Header/>
+      <div className='below-header'>
+      <Nav>
           { !isConnect ?
           <Button colorScheme='purple' className='btn-pos' onClick={walletConnect}>Connect Wallet</Button>
           : <React.Fragment>
-            <div className='nav-addr'>{trimAddr(currentAddress)}</div>
-            <div className='nav-addr'>{accbal} CLT</div>
+            <div className='txt-pos'>{trimAddr(currentAddress)}</div>
+            <div className='txt-pos'>{accbal} CLT</div>
             </React.Fragment>
         }
         </Nav>
-        <span style={{fontSize:"x-large",marginLeft:"24px"}}><b>Our Menu</b></span>
+        <div style={{fontSize:"x-large",marginLeft:"20%",marginTop:"12px",fontWeight:"600"}}> Menu </div>
         </div>
       <Content SC={shopContract} TC={tokenContract} currentAddress={currentAddress} isconnect={isConnect} allItems={allItems} setbal={setaccbal}/>
     </div>

@@ -11,8 +11,7 @@ import {
     Divider,
     CardFooter,
     ButtonGroup,
-    Button,
-    Center
+    Button
 } from "@chakra-ui/react";
 import './App.css';
 const Web3 = require('web3');
@@ -116,11 +115,11 @@ function Content({ SC,TC, currentAddress, isconnect, allItems,setbal }) {
         }
     };
 
-    const txnanimation = ()=>{
-        if(!isbCWCcall || !isbCWEcall){
-            return(<div id="txn-wait">Wait...</div>);
-        }
-    };
+    // const txnanimation = ()=>{
+    //     if(!isbCWCcall || !isbCWEcall){
+    //         return(<div id="txn-wait">Wait...</div>);
+    //     }
+    // };
 
     return (
         <div id="menu" >

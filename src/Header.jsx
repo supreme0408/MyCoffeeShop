@@ -5,7 +5,6 @@ import './App.css'
 import logo from './logo.png';
 function Header() {
   return (
-    <div>
       <header>
         <Center bg='brown' h='100px' color='white'>
           <span className="logo">
@@ -15,7 +14,6 @@ function Header() {
           <h1>BIT COFFEE</h1>
         </Center>
       </header>
-    </div>
   );
 }
 
